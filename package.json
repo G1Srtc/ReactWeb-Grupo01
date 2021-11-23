@@ -1,0 +1,24 @@
+{
+  "name": "projeto",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ProjetoReact",
+  "main": "index.js",
+  "scripts": {
+      "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjoiaResidencia/ReactWeb-Grupo01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AjoiaResidencia/ReactWeb-Grupo01/issues"
+  },
+  "homepage": "https://github.com/AjoiaResidencia/ReactWeb-Grupo01#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
