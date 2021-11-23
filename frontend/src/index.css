@@ -194,3 +194,19 @@ img.large{
 .error{
   color:rgb(201, 5, 5);
 }
+
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger{
+  color: #c90000;
+  background-color: #fdf5f5;
+}
