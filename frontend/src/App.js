@@ -1,30 +1,31 @@
 import React from 'react';
 
+import data from './data';
+
 function App() {
   return (
     <div className='grid-container'>
             <header className='row'>
                 <div>
-                    <a className='brand' href='index.html'>KDRF</a>
+                    <a className='brand' href='/'>KDRF</a>
                 </div>
                 <div>
-                    <a href="cart.html">Carrinho</a>
-                    <a href="signin.html">Sign In</a>
+                    <a href="/cart">Carrinho</a>
+                    <a href="/signin">Sign In</a>
                 </div>
 
             </header>
             <main>
                 <div className='row center'>
-                  {
-                    data.produtos.map(produtos =>(
-                      <div className='card'>
-                      <a href="product.html">
+                    {data.products.map((product) => (
+                      <div key={product._id} className='card'>
+                      <a href={`/product/${product._id}`}>
                           
-                          <img className='medium' src='./images/p1.png' alt='product'/>
+                          <img className='medium' src={product.imagem} alt={product.name}/>
                       </a>
                       <div className='card-body'>
-                          <a href="product.html">
-                              <h2>{produtos.nome}</h2>
+                        <a href={`/product/${product._id}`}>
+                              <h2>{product.name}</h2>
                           </a>
                           <div className='rating'>
                               <span> <i className='fa fa-star'></i> </span>                               
@@ -34,15 +35,14 @@ function App() {
                               <span> <i className='fa fa-star'></i> </span>                                                                    
                           </div>
                           <div className='price'>
-                              $120
+                              R${product.price}
                           </div>
-                    </div>     
-
+                      </div>                        
+                  </div>
                     ))
-                  }
-                                      
+
+                    }                                  
                 </div>
-                                                                                                            
             </main>
             <footer className='row center'>@2021 TODOS OS DIREITOS RESERVADOS</footer>
         </div>
